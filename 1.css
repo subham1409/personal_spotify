@@ -5,6 +5,7 @@ body{
 
 *{
     margin: 0;padding: 0;
+    scrollbar-color: grey;
 }
 
 .nav ul{
@@ -36,7 +37,6 @@ body{
 .container{
     display: flex;
     max-height: 72vh;
-    background-color: black;
     background-image: url(bg3.jpeg);
     background-attachment: fixed;
     background-size: cover;
@@ -51,11 +51,12 @@ body{
     position: sticky;
     overflow-y: auto;
     scrollbar-width: none;
+    margin-bottom: 20px;
 }
 
 .bottom{
     position: sticky;
-    height: 115px;
+    height: 100px;
     background-color: black;
     color: white;
     bottom: 0;
@@ -66,9 +67,28 @@ body{
 }
 
 #progressbar{
+    -webkit-appearance: none;
+    background-color: grey;
+    color: black;
+    border-radius: 15px;
     width: 75vw;
     cursor: pointer;
     scroll-behavior: smooth;
+    outline: none;
+    height: 10px;
+}
+
+#progressbar::-moz-range-progress{
+    background: black;
+}
+
+#progressbar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: rgb(61, 61, 61);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
 }
 
 .icons{
@@ -119,11 +139,52 @@ h1{
     position: absolute;
     left: 13vw;
     padding-top: 20px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .songinfo img{
     opacity: 0;
     transition: opacity 0.3s ease-in;
     padding: 0 20px 0 0;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+ 
+.container{
+    background-color: black;
+    background-image: none;
+    width: 80%;
+    height: 65vh;
+    margin: 20px 20px 34px 20px;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 25px;
+    justify-content: center;
+    padding-left: 68px;
+}
+
+.songitem{
+    background-color: rgb(56, 56, 56);
+    width: 300px;
+    margin: 15px -5px;
+    padding: 15px;
+}
+
+.bottom{
+    margin-bottom: -1px;
+}
+
+.songinfo{
+    position: absolute;
+    left: 7vh;
+    top: 6px;
+}
+
+.icons{
+    padding: 20px 7px 0px 20px;
+    margin-top: 10px;
+}
+
 }

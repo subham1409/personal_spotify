@@ -7,18 +7,33 @@ let myprogressbar = document.getElementById('progressbar');
 let gif = document.getElementById('gif');
 let mastersong = document.getElementById('mastersong');
 let songitem = Array.from(document.getElementsByClassName('songitem'));
+let timespan = document.getElementsByClassName('timespan');
 
 
 let song = [
-    {songname : "1", filepath : "songs/1.mp3", coverpath : "covers/1.jpg"},
-    {songname : "2", filepath : "songs/2.mp3", coverpath : "covers/2.jpg"},
-    {songname : "3", filepath : "songs/3.mp3", coverpath : "covers/3.jpg"},
-    {songname : "4", filepath : "songs/4.mp3", coverpath : "covers/4.jpg"},
-    {songname : "5", filepath : "songs/5.mp3", coverpath : "covers/5.jpg"},
-    {songname : "6", filepath : "songs/6.mp3", coverpath : "covers/6.jpg"},
-    {songname : "7", filepath : "songs/7.mp3", coverpath : "covers/7.jpg"},
+    {songname : "Arz kiya hai", filepath : "songs/1.mp3", coverpath : "covers/1.jpg"},
+    {songname : "Kashish", filepath : "songs/2.mp3", coverpath : "covers/2.jpg"},
+    {songname : "Saiyaara", filepath : "songs/3.mp3", coverpath : "covers/3.jpg"},
+    {songname : "Saiyyan", filepath : "songs/4.mp3", coverpath : "covers/4.jpg"},
+    {songname : "Brooklyn Baby", filepath : "songs/5.mp3", coverpath : "covers/5.jpg"},
+    {songname : "O Rangrez", filepath : "songs/6.mp3", coverpath : "covers/6.jpg"},
+    {songname : "Greedy", filepath : "songs/7.mp3", coverpath : "covers/7.jpg"},
     {songname : "8", filepath : "songs/8.mp3", coverpath : "covers/8.jpg"},
     {songname : "9", filepath : "songs/9.mp3", coverpath : "covers/9.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
+    {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
     {songname : "10", filepath : "songs/10.mp3", coverpath : "covers/10.jpg"},
     {songname : "11", filepath : "songs/11.mp3", coverpath : "covers/11.jpg"},
     {songname : "12", filepath : "songs/12.mp3", coverpath : "covers/12.jpg"}
@@ -67,7 +82,7 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
         songindex = parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioelement.src = "songs/"+ (songindex+1) +".mp3";
+        audioelement.src = "songs/"+ (songindex) +".mp3";
         mastersong.innerText = song[songindex].songname;
         audioelement.currentTime = 0;
         audioelement.play();
@@ -106,3 +121,10 @@ document.getElementById('previous').addEventListener('click', ()=>{
         masterplay.classList.add('fa-circle-pause');
         mastersong.innerText = song[songindex-1].songname;
 })
+
+audioelement.addEventListener("timeupdate", () => {
+  let minutes = Math.floor(audioelement.currentTime / 60);
+  let seconds = Math.floor(audioelement.currentTime % 60);
+
+  timespan.textContent = minutes + ":" + seconds;
+});
