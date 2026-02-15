@@ -1,6 +1,8 @@
 body{
     background-color: rgb(56, 56, 56);
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-y: hidden;
+    margin: 0;
 }
 
 *{
@@ -55,7 +57,6 @@ body{
 }
 
 .bottom{
-    position: sticky;
     height: 100px;
     background-color: black;
     color: white;
@@ -64,6 +65,12 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    width: 100%;
+    z-index: 400;
 }
 
 #progressbar{
@@ -122,11 +129,8 @@ body{
 
 .timespan{
     margin: 0 20px;
-}
-
-.timespan i{
-    cursor: pointer;
-    padding-left: 10px;
+    position: fixed;
+    right: 12%;
 }
 
 h1{
@@ -137,7 +141,7 @@ h1{
 
 .songinfo{
     position: absolute;
-    left: 13vw;
+    left: 13%;
     padding-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -151,40 +155,67 @@ h1{
 @media (min-width: 300px) and (max-width: 600px) {
  
 .container{
+    display: flex;
+    justify-content: center;
     background-color: black;
     background-image: none;
     width: 80%;
     height: 65vh;
-    margin: 20px 20px 34px 20px;
+    margin: 8% auto;
+    padding: 0;
     overflow-x: hidden;
+    padding: 20px;
 }
 
 h1{
     font-size: 25px;
-    justify-content: center;
-    padding-left: 68px;
+    place-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .songitem{
     background-color: rgb(56, 56, 56);
-    width: 300px;
-    margin: 15px -5px;
-    padding: 15px;
+    width: 115%;
+    margin: 0 0px 20px -15%;
+}
+
+.songitemcontainer{
+    padding: 0;
+    margin: 0 auto;
+}
+
+#progressbar{
+    margin-bottom: 8px;
+}
+
+.songinfo{
+    left: 12%;
 }
 
 .bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
     margin-bottom: -1px;
+    width: 100%;
+    z-index: 400;
+    height: 120px;
 }
 
 .songinfo{
     position: absolute;
-    left: 7vh;
-    top: 6px;
+    left: 12%;
+    top: 15px;
 }
 
 .icons{
     padding: 20px 7px 0px 20px;
     margin-top: 10px;
+}
+
+.timespan{
+    right: 9%;
 }
 
 }
