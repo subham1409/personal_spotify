@@ -175,9 +175,12 @@ h1{
 }
 
 .songitem{
+    position: relative;
     background-color: rgb(56, 56, 56);
-    width: 115%;
-    margin: 0 0px 20px -15%;
+    width: 110%;
+    margin: 0 0px 20px -4%;
+    left: -8%;
+    right: 5%;
 }
 
 .songitemcontainer{
@@ -211,7 +214,7 @@ h1{
 }
 
 .songinfo img{
-    padding: 0 0 5px 0;
+    padding: 0 7px 0 0;
 }
 
 .icons{
