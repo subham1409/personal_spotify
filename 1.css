@@ -191,6 +191,7 @@ h1{
 
 .songinfo{
     left: 12%;
+    z-index: 0;
 }
 
 .bottom{
@@ -209,6 +210,10 @@ h1{
     top: 15px;
 }
 
+.songinfo img{
+    padding: 0 0 5px 0;
+}
+
 .icons{
     padding: 20px 7px 0px 20px;
     margin-top: 10px;
@@ -216,6 +221,8 @@ h1{
 
 .timespan{
     right: 9%;
+    z-index: 5;
+    background-color: black;
 }
 
 }

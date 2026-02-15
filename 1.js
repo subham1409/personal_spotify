@@ -1,4 +1,4 @@
-//alert("welcome to appify this is only for personal use of ARPITA");
+alert("welcome to appify this is only for personal use of ARPITA");
 
 let songindex = 0;
 let audioelement = new Audio();
