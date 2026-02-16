@@ -153,9 +153,14 @@ h1{
 }
 
 @media (min-width: 300px) and (max-width: 600px) {
+.maincon{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
  
 .container{
-    display: flex;
+    /* display: flex;
     justify-content: center;
     background-color: black;
     background-image: none;
@@ -164,7 +169,17 @@ h1{
     margin: 8% auto;
     padding: 0;
     overflow-x: hidden;
-    padding: 20px;
+    padding: 20px; */
+    background-color: black;
+    background-image: none;
+    width: 80%;
+    display: flex;
+    align-items: top;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-shrink: 2;
+    justify-content: center;
 }
 
 h1{
@@ -175,17 +190,26 @@ h1{
 }
 
 .songitem{
-    position: relative;
+    /* position: relative;
     background-color: rgb(56, 56, 56);
     width: 110%;
     margin: 0 0px 20px -4%;
     left: -8%;
-    right: 5%;
+    right: 5%; */
+    width: 100%;
+    background-color: rgb(56, 56, 56);
 }
 
 .songitemcontainer{
-    padding: 0;
-    margin: 0 auto;
+    /* padding: 0;
+    margin: 0 auto; */
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    flex-direction: column;
+    padding-bottom: 50px;
 }
 
 #progressbar{
@@ -201,7 +225,7 @@ h1{
     position: fixed;
     bottom: 0;
     left: 0;
-    margin-bottom: -1px;
+    /* margin-bottom: -1px; */
     width: 100%;
     z-index: 400;
     height: 120px;
