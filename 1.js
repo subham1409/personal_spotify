@@ -1,4 +1,4 @@
-//alert("welcome to appify this is only for personal use of SUBHAM");
+alert("welcome to appify this is only for personal use of ARPITA SANANDIYA");
 
 let songindex = 0;
 let audioelement = new Audio();
